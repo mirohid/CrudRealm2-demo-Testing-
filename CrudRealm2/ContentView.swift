@@ -41,6 +41,8 @@ struct ContentView: View {
                     isAddPersonSheetPresented.toggle()
                 } label: {
                     Image(systemName: "plus")
+                        .resizable(capInsets: .init())
+                        .frame(width: 32, height: 32)
                 }
             }
             .sheet(isPresented: $isAddPersonSheetPresented) {
